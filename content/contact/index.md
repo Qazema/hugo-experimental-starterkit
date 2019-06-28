@@ -1,11 +1,9 @@
 ---
-title: "À contact"
-description: "Un page de contact"
-date: 2019-06-28T14:04:00+01:00
+title: "Contact"
+date: 2019-06-28T15:04:25+02:00
 draft: false
 ---
 
-# Un formulaire de contact.
+# Une page de contact.
 
-Il est généré via du html simple dans Hugo. Netlify s'occupe du reste (plus d'infos ici : https://www.netlify.com/docs/form-handling/?_ga=2.16107059.446050243.1561715750-1095302298.1554968132 ).
-
+Une page de contact générique. Il s'agit d'un simple formulaire HTML. L'envoie du formulaire est géré par Netlify, l'ajout d'un attribut "netlify" sur la la balise "form" suffit à le faire fonctionner.

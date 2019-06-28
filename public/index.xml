@@ -12,6 +12,24 @@
     
     
     <item>
+      <title>Contact</title>
+      <link>https://hugo-experimental-starterkit.netlify.com/contact/</link>
+      <pubDate>Fri, 28 Jun 2019 15:04:25 +0200</pubDate>
+      
+      <guid>https://hugo-experimental-starterkit.netlify.com/contact/</guid>
+      <description>Une page de contact. Une page de contact générique. Il s&amp;rsquo;agit d&amp;rsquo;un simple formulaire HTML. L&amp;rsquo;envoie du formulaire est géré par Netlify, l&amp;rsquo;ajout d&amp;rsquo;un attribut &amp;ldquo;netlify&amp;rdquo; sur la la balise &amp;ldquo;form&amp;rdquo; suffit à le faire fonctionner.</description>
+    </item>
+    
+    <item>
+      <title>Test Page</title>
+      <link>https://hugo-experimental-starterkit.netlify.com/test-page/</link>
+      <pubDate>Fri, 28 Jun 2019 14:53:00 +0200</pubDate>
+      
+      <guid>https://hugo-experimental-starterkit.netlify.com/test-page/</guid>
+      <description>Coucou c&amp;rsquo;est une page de test.</description>
+    </item>
+    
+    <item>
       <title>Milkyway</title>
       <link>https://hugo-experimental-starterkit.netlify.com/posts/milkyway/</link>
       <pubDate>Thu, 13 Jun 2019 15:14:11 +0200</pubDate>
