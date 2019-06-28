@@ -59,6 +59,15 @@ h2 {
 h3 {
   font-size: 1.5em;
 }
+label {
+  display: block;
+  max-width: 100%;
+}
+textarea,
+input {
+  max-width: 100%;
+  padding: .5rem;
+}
 ::selection {
   background-color: #E44011;
   color: #fff;
