@@ -55,6 +55,15 @@
             </a>
           </li>
         
+          
+          
+          
+          <li class="main-nav__item">
+            <a href="/contact" class="main-nav__link main-nav__item--active">
+              Contact
+            </a>
+          </li>
+        
       </ul>
     </nav>
   </div>
@@ -90,9 +99,23 @@
   <section class="grid-row">
     
 
-<h1 id="une-page-de-contact">Une page de contact.</h1>
+<h1 id="une-page-avec-formulaire-de-contact">Une page avec formulaire de contact.</h1>
 
-<p>Une page de contact générique. Il s&rsquo;agit d&rsquo;un simple formulaire HTML. L&rsquo;envoie du formulaire est géré par Netlify, l&rsquo;ajout d&rsquo;un attribut &ldquo;netlify&rdquo; sur la la balise &ldquo;form&rdquo; suffit à le faire fonctionner.</p>
+<p>Une page de contact générique. Il s&rsquo;agit d&rsquo;un simple formulaire HTML. L&rsquo;envoie du formulaire est géré par Netlify, l&rsquo;ajout d&rsquo;un attribut &ldquo;netlify&rdquo; sur la la balise &ldquo;form&rdquo; suffit à le faire fonctionner. La doc est ici : <a href="https://www.netlify.com/docs/form-handling/">https://www.netlify.com/docs/form-handling/</a></p>
+
+<form name="contact" method="POST" netlify>
+  <div>
+    <label for="email">Email :</label>
+    <input type="email" name="email" />
+  </div>
+  <div>
+    <label for="message">Message :</label>
+    <textarea name="message"></textarea>
+  </div>
+  <div>
+    <button type="submit">Envoyer</button>
+  </div>
+</form>
 
   </section>
 

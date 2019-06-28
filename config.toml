@@ -33,3 +33,8 @@ disableKinds = ["taxonomyTerm"]
     name = "À propos"
     url = "/a-propos"
     weight = 3
+
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact"
+    weight = 4
