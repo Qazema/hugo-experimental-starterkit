@@ -1,6 +1,6 @@
 ---
-title: "Home"
-description: "Programme de création d'appartements Villa Caffarelli à Toulouse."
+title: "Accueil"
+description: "Page d'accueil d'un site expérimental pour le SSG Hugo."
 date: 2019-03-07T16:33:15+01:00
 draft: false
 ---
