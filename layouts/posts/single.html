@@ -1,0 +1,53 @@
+{{ define "main" }}
+  {{ $.Param "filePath" }}
+
+    <header class="hero">
+      {{ with .Resources.GetMatch "Thumbnail" }}
+        {{ $xsmallHero := .Fill "600x400 q90" }}
+        {{ $smallHero := .Fill "800x550 q90" }}
+        {{ $mediumHero := .Fill "1000x400 q90" }}
+        {{ $largeHero := .Fill "2000x600 q90" }}
+        <img 
+             src="{{ $largeHero.RelPermalink }}"
+             srcset="{{ $xsmallHero.RelPermalink }} 400w,
+              {{ $smallHero.RelPermalink }} 600w,
+              {{ $mediumHero.RelPermalink }} 1000w
+             "
+             alt="{{ $largeHero.Title }}"
+             class="hero__image">
+      {{ end }}
+      <div class="hero__wrapper">
+        <div class="hero__breadcrumb">
+          {{ partial "breadcrumb" . }}  
+        </div>
+        <div class="grid-row">
+          <h1 class="hero__title">
+            {{ .Title }}
+          </h1>
+        </div>
+      </div>
+    </header>
+    
+    <section class="grid-row grid-row--small">
+      <div class="article__row">
+        {{ .Content }}
+      </div>
+    </section>
+
+    <aside class="grid-row grid-row--small">
+      <div class="related">
+      {{ $related := .Site.RegularPages.Related . | first 3 }}
+      {{ with $related }}
+        <p class="related__title">Sur le même thème :</p>
+        <section class="post-list">
+          <div class="post-list__wrapper">
+            {{ range . }}
+              {{ partial "post-list-item" . }}
+            {{ end }}
+          </div>
+        </section>
+      </div>
+      {{ end }}
+    </aside>
+    
+{{ end }}

@@ -1,0 +1,19 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="title" content="{{ .Title }} |  {{ .Site.Title }}">
+  <meta name="description" content="{{ .Description }}">
+  <meta property="og:site_name" content=" {{ .Site.Title }}">
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+  <meta property="og:url" content="{{ .Permalink }}" />
+  <meta property="og:title" content="{{ .Title }}">
+  {{ with .Site.Language }}<meta property="og:locale" content="{{ .Lang }}" />{{ end }}
+  {{ with .Site.Params.facebook.appid }}<meta property="fb:app_id" content="{{ . }}" />{{ end }}
+  <title>{{ .Title }} |  {{ .Site.Title }}</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="stylesheet" href="/styles/global.css">
+  <link rel="stylesheet" href="/styles/modules.css">
+  <link rel="stylesheet" href="/styles/fonts.css">
+</head>

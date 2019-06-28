@@ -1,0 +1,22 @@
+<li class="cards__item card">
+  <div class="card__face card__face-a">
+  	<img src="{{ .Get "image"}}" alt="{{ .Get "alt"}}">
+  </div>
+  <div class="card__face card__face-b">
+  	<p class="card__title">
+  	  {{ .Get "title"}}
+  	</p>
+  	<p class="card__subtitle">
+  	  {{ .Get "subtitle"}}
+  	</p>
+  	<p class="card__text">
+  	  {{ .Inner }}
+  	</p>
+  	<a href="{{ .Get "ctaLink"}}" class="card__cta">
+  	  Télécharger le plan
+  	</a>
+  	<a href="{{ .Get "secondaryLink"}}" class="card__link">
+  	  Contact
+  	</a>
+  </div>
+</li>

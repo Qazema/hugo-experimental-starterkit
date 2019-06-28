@@ -1,0 +1,27 @@
+<article class="post-list__item">
+  <a class="post-list__image-link" href="{{ .Permalink }}" rel="nofollow">
+  {{ with .Resources.GetMatch "Thumbnail" }}
+    {{ $featuredThumbnail := .Fill "400x230 q90" }}
+    {{ $featuredThumbnail2x := .Fill "800x460 q90" }}
+    <picture>
+      <img srcset="{{ $featuredThumbnail.RelPermalink }},
+                  {{ $featuredThumbnail2x.RelPermalink }} 2x"
+          src="{{ $featuredThumbnail.RelPermalink }}"
+          alt="{{ .Title }}"
+          class="post-list__image">
+    </picture>
+  {{ end }}
+  </a>
+  <div class="post-list__content">
+    <h3 class="post-list__title">
+      <a class="post-list__title-link" href="{{ .Permalink }}">{{ .Title }}</a>
+    </h3>
+    <time datetime="{{ .Date.Format "2006-01-02" }}" class="post-list__date">
+      {{ .Date.Format "02/01/2006" }}
+    </time>
+    <p class="post-list__text">
+      {{ .Description }}
+    </p>
+    {{with .Params.premium }}<span class="post-list__tag">{{ . }}</span>{{ end }}
+  </div>
+</article>

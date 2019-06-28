@@ -1,0 +1,22 @@
+<header class="header">
+  <div class="grid-row">
+    <a href="/" class="header__logo-link">
+      <img src="/images/logotype-starterkit.svg" alt="Un kit de démarrage" width="200" height="80" class="header__logo">
+    </a>
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+          {{ $active := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+          {{ $active = or $active (eq .Name $currentPage.Title) }}
+          {{ $active = or $active (and (eq .Name "Articles") (eq $currentPage.Section "posts")) }}
+          <li class="main-nav__item">
+            <a href="{{ .URL }}" class="main-nav__link{{ if $active }} main-nav__item--active{{ end }}">
+              {{ .Name }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</header>

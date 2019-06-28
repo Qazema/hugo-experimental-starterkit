@@ -1,0 +1,21 @@
+{{ define "main" }}
+<main class="grid-row">
+  <header class="list-page">
+    <h1 class="list-page__title">{{.Title}}</h1>
+  </header>
+  <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
+  <section class="list-page__content">
+    {{ .Content }}
+  </section>
+
+  <!-- Ranges through content/posts/*.md -->
+  <section class="post-list">
+    <div class="post-list__wrapper">
+    {{ range .Paginator.Pages }}
+      {{ partial "post-list-item" . }}
+    {{ end }}
+    </div>
+    {{ partial "pagination" . }}
+  </section>
+</main>
+{{ end }}

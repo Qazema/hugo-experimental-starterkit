@@ -1,0 +1,95 @@
+/**
+ * @FILE : Contains the site base styles.
+ * It includes global and recurrent elements
+ * as the page header or footer.
+ */
+
+/**
+ * Bases
+ */
+html {
+  height: 100%;
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+}
+html, body {
+  position: relative;
+  margin: 0;
+  font-family: "brandon-grotesque", Arial, sans-serif;
+  color: #000;
+}
+body {
+  overflow-x: hidden;
+}
+body * {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+p, h1, h2, h3 {
+  position: relative;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.3em;
+}
+::selection {
+  background-color: #E44011;
+  color: #fff;
+}
+
+/**
+ * Links
+ */
+a {
+  color: #E44011;
+}
+
+/**
+ * Layout base
+ */
+.grid-row {
+  padding: 0 1rem;
+}
+@media all and (min-width: 700px) {
+  .grid-row {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+/**
+ * Header & Footer
+ */
+.header,
+.footer {
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+  background-color: #78898F;
+}
+.header img,
+.footer img {
+  display: block;
+  margin: 0 auto .5rem;
+}
+.footer a {
+  display: block;
+  margin-bottom: .5rem;
+  font-size: .9em; 
+  color: #fff;
+}
+.footer a:hover {
+  text-decoration-color: #E44011;
+}

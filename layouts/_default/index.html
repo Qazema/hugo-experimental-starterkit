@@ -1,0 +1,39 @@
+<html lang="{{ .Site.Language.Lang }}" dir="ltr">
+{{ partial "head" . }}
+<body>
+  {{ partial "header" . }}
+
+  <section class="home-slider">
+  {{ $sliderBundle := .Site.GetPage "/sliders" }}
+    <div class="home-slider__wrapper">
+      {{ range ( $sliderBundle.Resources.ByType "page" ) }}
+        <article class="home-slider__item">
+          {{ .Content }}
+        </article>
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="grid-row">
+    {{ .Content }}
+  </section>
+
+
+  
+
+
+
+  <section class="post-list grid-row">
+  {{ $postsBundle := .Site.GetPage "section" "/posts" }}
+    <div class="post-list__wrapper">
+      {{ range first 3 $postsBundle.Pages }}
+        {{ partial "post-list-item" . }}
+      {{ end }}
+    </div>
+    <a href="/posts" class="post-list__global-cta">Voir tous les articles</a>
+  </section>
+
+  {{ partial "footer" . }}
+  {{ partial "scripts" . }}
+</body>
+</html>
