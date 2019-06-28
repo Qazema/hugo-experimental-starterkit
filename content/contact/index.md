@@ -1,6 +1,6 @@
 ---
-title: "À propos"
-description: "C'est une page basique à la racine"
+title: "À contact"
+description: "Un page de contact"
 date: 2019-06-28T14:04:00+01:00
 draft: false
 ---
