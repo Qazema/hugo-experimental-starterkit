@@ -59,15 +59,6 @@ h2 {
 h3 {
   font-size: 1.5em;
 }
-label {
-  display: block;
-  max-width: 100%;
-}
-textarea,
-input {
-  max-width: 100%;
-  padding: .5rem;
-}
 ::selection {
   background-color: #E44011;
   color: #fff;
@@ -78,6 +69,9 @@ input {
  */
 a {
   color: #E44011;
+}
+a:hover {
+  color: #ff6336;
 }
 
 /**
@@ -171,9 +165,6 @@ a {
     padding: 0;
     text-align: left;
   }
-  .header__wrapper {
-
-  }
   .header__logo-link,
   .main-nav {
     display: inline-block;
@@ -187,6 +178,61 @@ a {
   }
   .main-nav__item {
     margin: 0 1rem;
+  }
+}
+
+/**
+ * Forms
+ */
+label {
+  display: block;
+  margin-bottom: .25rem;
+  max-width: 100%;
+  font-size: .9em;
+}
+textarea,
+input {
+  max-width: 100%;
+  padding: .5rem;
+  background-color: #fff;
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+  border: 1px solid #ccc;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+  border: 1px solid #E44011;
+}
+input {
+  width: 300px;
+}
+textarea {
+  width: 100%;
+  min-height: 150px;
+}
+button {
+  padding: .5rem 1rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #36515a;
+  border: none;
+  cursor: pointer;
+  transition: all ease .15s;
+}
+button:hover {
+  background-color: #E44011;
+}
+.simple-form {
+  max-width: 500px;
+  margin: 1rem auto;
+}
+.form-item {
+  margin-bottom: 1em;
+}
+@media all and (min-width: 750px) {
+  .simple-form {
+    margin: 2rem auto;
   }
 }
 
