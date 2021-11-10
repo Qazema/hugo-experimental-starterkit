@@ -5,6 +5,10 @@ title = "Dev - Hugo Experimental Starterkit"
 paginate = 9
 disableKinds = ["taxonomyTerm"]
 
+[minify]
+  disableCSS = true
+  disableJS = true
+
 [related]
   includeNewer = true
   threshold = 80

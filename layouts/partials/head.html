@@ -13,7 +13,10 @@
   {{ with .Site.Params.facebook.appid }}<meta property="fb:app_id" content="{{ . }}" />{{ end }}
   <title>{{ .Title }} |  {{ .Site.Title }}</title>
   <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
-  <link rel="stylesheet" href="/styles/global.css">
-  <link rel="stylesheet" href="/styles/modules.css">
-  <link rel="stylesheet" href="/styles/fonts.css">
+  {{- $styles := slice (resources.Get "styles/global.css")
+                       (resources.Get "styles/fonts.css")
+                       (resources.Get "styles/modules.css")
+                       | resources.Concat "assets/styles/main.css" | minify }}
+
+<link rel="stylesheet" href="{{ $styles.Permalink }}">
 </head>
