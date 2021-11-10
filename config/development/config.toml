@@ -1,7 +1,7 @@
-baseURL = "https://hugo-experimental-starterkit.netlify.com"
+baseURL = "http://www.hugo-experimental-starterkit.kwdev"
 languageCode = "fr-fr"
 defaultContentLanguage = "fr"
-title = "Hugo Experimental Starterkit"
+title = "Dev - Hugo Experimental Starterkit"
 paginate = 9
 disableKinds = ["taxonomyTerm"]
 

@@ -1,0 +1,40 @@
+baseURL = "https://hugo-experimental-starterkit.netlify.com"
+languageCode = "fr-fr"
+defaultContentLanguage = "fr"
+title = "Default - Hugo Experimental Starterkit"
+paginate = 9
+disableKinds = ["taxonomyTerm"]
+
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = false
+  [[related.indices]]
+    name = "keywords"
+    weight = 100
+  [[related.indices]]
+    name = "date"
+    weight = 10
+
+[menu]
+
+  [[menu.main]]
+    identifier = "accueil"
+    name = "Accueil"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Articles"
+    url = "/posts/"
+    weight = 2
+
+  [[menu.main]]
+    name = "À propos"
+    url = "/a-propos"
+    weight = 3
+
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact"
+    weight = 4
